@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #333;
+}
+
+.barrastatus{
+    width: 450px;
+    height: 50px;
+    margin: 100px auto;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.progress-bar{
+    width: 506px;
+    height: 26px;
+    background-color: #bbb;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    padding: 3px;
+    margin: 50px auto;
+}
+
+.progress{
+    width: 500px;
+    height: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: yellow;
+    
+}

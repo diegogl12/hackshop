@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <title>Consultar Negociação</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+    <link href="estilo-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+</head>
+<body>
+
+
+<!-- Barra navegação -->
+<nav class="navbar navbar-default" >
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#barra-navegacao">
+                <span class="sr-only">Alternar Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <span class="img-logo row col-xm-6">GRADÚ</span>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="welcome">Bem Vindo Usuário</li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="icone">ICON</span>
+                        <span class="caret caret-chapeu"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Configurações</a> </li>
+                        <li><a href="login.html">Logout</a> </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+<!-- Fim da Barra de Navegação -->
+
+<!-- Barra Lateral -->
+
+<div id="wrapper">
+
+    <!-- SideBar -->
+
+    <div class="sidebar-wrapper quadrado">
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index.html">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-negociacoes">
+                    <span class="sidebar-icon"></span>
+                    <span class="sidebar-title">Negociações</span>
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-negociacoes" class="panel-collapse collapse panel-switch">
+                    <li><a href="nova-negociacao.html">Nova Negociação</a></li>
+                    <li><a href="consultar-negociacao.html">Consultar Negociação</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-clientes">
+                    <span class="sidebar-icon"></span>
+                    <span class="sidebar-title">Clientes</span>
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-clientes" class="panel-collapse collapse panel-switch">
+                    <li><a href="cadastrar-cliente.html">Cadastrar Cliente</a></li>
+                    <li><a href="consultar-cliente.html">Consultar Cliente</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="produto.html">
+                    Produtos
+                </a>
+            </li>
+            <li>
+                <a href="gerar-relatorio.html">
+                    Relatório
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Page Content -->
+    <div class="main">
+        <div class="container-fluid">
+
+            <div class="row">
+                    <h3>Consultar Negociação</h3>
+
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="nova-negociacao.html">
+                            <i class="fa fa-plus-circle" style="font-size:48px;color:green"></i>
+                        </a>
+                    </li>
+
+
+                    <li class="navbar navbar-light bg-light navbar-right pesquisar">
+                        <form class="form-inline">
+                            <input class="form-control" id="input-pesquisa" type="text" placeholder="Pesquisar">
+                        </form>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+                    <table class="table table-bordered table-responsive">
+                        <thead>
+                            <!-- colunas -->
+                          <tr>
+                            <th scope="col">Nome do Cliente</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">#</th>
+                          </tr>
+                        </thead>
+                        <tbody id="minha-tabela">
+                            <!-- linhas -->
+                          <tr>
+                            <th scope="row">João da Silva</th>
+                            <th scope="row">Boné</th>
+                            <th scope="row">R$ 40,00</th>
+                            <th scope="row">
+                                <a href="#">
+                                    <i class="fa fa-edit" style="font-size:28px;"></i>
+                                </a>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th scope="row">000.000.000.02</th>
+                            <th scope="row">Boné</th>
+                            <th scope="row">R$ 40,00</th>
+                            <th scope="row">
+                          </tr>
+                          <tr>
+                            <th scope="row">000.000.000-03</th>
+                            <th scope="row">Boné</th>
+                            <th scope="row">R$ 40,00</th>
+                            <th scope="row">
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- /#page-content-wrapper -->
+
+</div>
+
+<!-- Fim da barra lateral -->
+
+
+<script>
+        $(document).ready(function(){
+          $("#input-pesquisa").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#minha-tabela tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+</script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src= "bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Início</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+    <link href="estilo-sidebar.css" rel="stylesheet">
+    <link href="estilo-kanban.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <!-- As seguintes tags serão disposta para que os .js do kanban funcionem corretamente -->
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+
+</head>
+<body>
+
+
+<!-- Barra navegação -->
+<nav class="navbar navbar-default" >
+
+
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#barra-navegacao">
+                <span class="sr-only">Alternar Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <span class="img-logo row col-xm-6">GRADÚ</span>
+            </a>
+
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="welcome">Bem Vindo Usuário</li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="icone">ICON</span>
+                        <span class="caret caret-chapeu"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Configurações</a> </li>
+                        <li><a href="login.html">Logout</a> </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+</nav>
+<!-- Fim da Barra de Navegação -->
+
+
+<!-- Barra Lateral -->
+
+<div id="wrapper">
+
+    <!-- SideBar -->
+
+    <div class="sidebar-wrapper quadrado">
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index.html">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-negociacoes">
+                <span class="sidebar-icon"></span>
+                    <span class="sidebar-title">Negociações</span>
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-negociacoes" class="panel-collapse collapse panel-switch">
+                    <li><a href="nova-negociacao.html">Nova Negociação</a></li>
+                    <li><a href="consultar-negociacao.html">Consultar Negociação</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-clientes">
+                <span class="sidebar-icon"></span>
+                    <span class="sidebar-title">Clientes</span>
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-clientes" class="panel-collapse collapse panel-switch">
+                    <li><a href="cadastrar-cliente.html">Cadastrar Cliente</a></li>
+                    <li><a href="consultar-cliente.html">Consultar Cliente</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="produto.html" >
+                    Produtos
+                </a>
+            </li>
+            <li>
+                <a href="gerar-relatorio.html">
+                    Relatório
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Fim da barra lateral -->
+
+    <!-- Page Content -->
+            <div class="main">
+                <div class="container-fluid">
+                <!-- Abas principais -->
+
+                <div class="container">
+
+                    <!-- Criação das abas -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="active"><a href="#lead" role="tab" data-toggle="tab" class="abas">Lead</a></li>
+                        <li><a href="#negociacao" role="tab" data-toggle="tab" class="abas">Negociação</a></li>
+                        <li class="dropdown  col-sm-2 tiipos">
+                            <label for="select-tipos"></label><br>
+
+                            <select class="form-control" id="select-tipos">
+                                <option value="todos"><a class="tipos" href="#">Todos</a></option>
+                                <option value="bone"><a class="tipos" href="#">Boné</a></option>
+                                <option value="camisa"><a class="tipos" href="#">Camisa</a></option>
+                                <option value="caneca"><a class="tipos" href="#">Caneca</a></option>
+                                <option value="casaco"><a class="tipos" href="#">Casaco</a></option>
+                            </select>
+                        </li>
+
+                    </ul>
+
+                    <!-- Conteúdo das abas -->
+                    <div class="tab-content">
+
+                        <!-- Aba Lead -->
+                    <!--
+
+                        <div class="tab-pane active" role="tabpanel" id="lead">
+                            <table class="table lead-neg">
+                                <!--Kanban
+
+                                <div class="container2" style="background-color:#80bdff;">
+                                    <h2>Pedido de Compra</h2>
+                                    <ul class="sortable connectedSortable">
+                                        <li class="card">Marcela P<br><br></li>
+                                    </ul>
+                                </div>
+
+                                <div class="container2" style="background-color:lightgoldenrodyellow;">
+                                    <h2>Pagar Fornecedor</h2>
+                                    <ul class="sortable connectedSortable" >
+                                        <li class="card">Activity B1</li>
+                                    </ul>
+                                </div>
+
+                                <!--fim do Kanban-->
+                            </table>
+                        </div>
+                    -->
+
+                    <div class="tab-pane active" role="tabpanel" id="lead">
+
+                            <div class="container kanban" style="background-color:#80bdff;">
+                                <h2>Pedido de Compra</h2>
+                                <ul class="sortable connectedSortable">
+                                    <li class="card">Activity A1</li>
+
+                                </ul>
+                                <div class="link-div">
+                                    <input type="text" id="new_text" value=""/>
+                                    <input type="button" name="btnAddNew" value="Nova Negociação" class="add-button"/>
+                                </div>
+                            </div>
+
+                            <div class="container kanban" style="background-color:lightgoldenrodyellow;">
+                                <h2>Pagar Fornecedor</h2>
+                                <ul class="sortable connectedSortable" >
+                                    <li class="card">Activity B1</li>
+                                    <li class="card">Activity B2</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Aba Negociação -->
+
+                    <!--
+                        <div class="tab-pane" role="tabpanel" id="negociacao">
+                                <table class="table lead-neg">
+                                        <tr>
+                                            <th scope="col">Pedido de Compra</th>
+                                            <th scope="col">Pagar Fornecedor</th>
+                                            <th scope="col">Receber Produtos</th>
+                                            <th scope="col">Embalar Produtos</th>
+                                            <th scope="col">Enviar Pedido</th>
+                                        </tr>
+                                    </table>
+                        </div>
+                    -->
+
+                    <div class="tab-pane" role="tabpanel" id="negociacao">
+                            <div class="container" style="background-color:#36618f;">
+                                <h2>Pedido de Compra</h2>
+                                <ul class="sortable connectedSortable">
+                                    <li class="card">Activity A1</li>
+
+                                </ul>
+                                <div class="link-div">
+                                    <input type="text" id="new_text" value=""/>
+                                    <input type="button" name="btnAddNew" value="Nova Negociação" class="add-button"/>
+                                </div>
+                            </div>
+                            <div class="container" style="background-color:lightgoldenrodyellow;">
+                                <h2>Pagar Fornecedor</h2>
+                                <ul class="sortable connectedSortable" >
+                                    <li class="card">Activity B1</li>
+                                    <li class="card">Activity B2</li>
+                                </ul>
+                            </div>
+                            <div class="container" style="background-color:lightgoldenrodyellow;">
+                                <h2>Receber Produtos</h2>
+                                <ul class="sortable connectedSortable" >
+                                    <li class="card">Activity B1</li>
+                                    <li class="card">Activity B2</li>
+                                </ul>
+                            </div>
+                            <div class="container" style="background-color:palegreen;">
+                                <h2>Embalar Produtos</h2>
+                                <ul class="sortable connectedSortable" >
+                                    <li class="card">Activity C1</li>
+                                    <li class="card">Activity C2</li>
+                                </ul>
+                            </div>
+                            <div class="container" style="background-color:#b2dba1;">
+                                <h2>Enviar Pedido</h2>
+                                <ul class="sortable connectedSortable" >
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- Fim das Abas principais -->
+              </div>
+        </div>
+</div>
+    <!-- /#page-content-wrapper -->
+
+<<<<<<< HEAD
+<br><br><br><br><br><br>Anotações:<br>
+<textarea class="anotacao" rows="10" placeholder="Use para anotações..." onclick="this.focus()" onfocus="this.select()" style="margin-left: 15px;">
+
+</textarea>
+
+
+<!-- Fim da barra lateral -->
+
+>>>>>>> 830ae6dcc39dbbee5348e9535bbc104737d8d638
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src= "bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

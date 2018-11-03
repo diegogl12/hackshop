@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Font-Gradu;
+    src: url(fontface/fonts/BebasNeue-Book.woff);
+}
+
+body{
+    font-family: Font-Gradu;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 175px;
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 2.5;
+    font-size: 18px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #000000;
+    background: #898989;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+    background: yellow;
+}
+
+
+.main{
+    margin-left: 15%;
+}
+

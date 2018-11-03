@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Font-Gradu;
+    src: url(fontface/fonts/BebasNeue-Book.woff);
+}
+
+body{
+    font-family: Font-Gradu;
+}
+
+h3 {
+    margin:5px;
+}
+
+input[type=text] {
+    margin:10px
+}
+
+input[type=button] {
+    margin:10px
+}
+
+.container2 {
+    width:20%; 
+    float:left;
+    clear: right;
+    margin:10px; 
+    border-radius: 5px;
+}
+
+.sortable { 
+    list-style-type: none; 
+    margin:0; 
+    padding:2px; 
+    min-height: 300px; 
+    border-radius: 5px;
+}
+
+.sortable li { 
+    margin: 3px 3px 3px 3px; 
+    padding: 5px; 
+    padding-left: 27px; 
+    font-size: 14px; 
+    height: 100%; 
+}
+
+.sortable li span { 
+    position: absolute; 
+    margin-left: -23.402px;
+}
+
+.card{
+    background-color:white;
+    border-radius:3px;
+    height: 100%;
+}
+
+.fa{
+    display: inline-block;
+    float: right;
+}
+
+.but-info
+{
+    border: none;
+    color: black;
+}
+
+.but-editar{
+    display: inline-block;
+    float: right;
+}
+
+
+
+
+/* Media queries */
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+    li {
+        font-size: 8px;
+    }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+    li {
+        font-size: 8px;
+    }
+
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 80px;
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 100px;
+    }
+}
+/* Fim Media queries */

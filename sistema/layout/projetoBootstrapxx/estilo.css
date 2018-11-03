@@ -1,0 +1,190 @@
+@font-face {
+    font-family: Font-Gradu;
+    src: url(fontface/fonts/BebasNeue-Book.woff);
+}
+
+body{
+    background: url("imagens/fundo.jpg");
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: Font-Gradu;
+    overflow: auto;
+}
+
+
+.img-logo
+{
+    height: 60px;
+    width: 140px;
+    display: block;
+    background: url("imagens/logo-sem-slogan.png") no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    color: transparent;
+}
+
+.img-logo:hover
+{
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+nav.navbar-transparente
+{
+    padding: 15px 0px;
+    background: transparent;
+    border: none;
+}
+
+.navbar-brand
+{
+    padding: 5px 15px;
+}
+
+.icone
+{
+    height: 40px;
+    width: 60px;
+    display: block;
+    background: url("imagens/chapeu.png") no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    color: transparent;
+}
+
+.icone:hover
+{
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.welcome
+{
+    font-size: 20px;
+    padding: 20px;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.quadrado
+{
+    max-width: 15%;
+    font-size: 15px;
+    font-family: "Bebas Neue", Arial, sans-serif;
+}
+
+
+/* unvisited link */
+a:link
+{
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited
+{
+    color: black;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover
+{
+    color: #4d4d4d;
+}
+
+/* selected link */
+a:active
+{
+    color: black;
+    text-decoration: strong;
+}
+
+.abas
+{
+    -webkit-border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    font-size: 64px;
+}
+
+.tipos
+{
+    font-size: 28px;
+
+}
+
+.progress{
+  width: 210%;
+  height: 100%;
+  background: black;
+  margin-left: 166px;
+}
+
+.progress .status{
+  background: yellow;
+  float: left;
+  height: 100%;
+  padding-left: 5px;
+  padding-top: 25px;
+  font-size: 12px;
+  line-height: 1.5
+}
+
+.pesquisar
+{
+    padding: 20px;
+    margin-left: 602px;
+}
+
+.tiipos{
+    padding: 30px;
+}
+
+.caret-chapeu{
+    position: absolute;
+    left: 85%;
+    top: 70%;
+}
+
+
+thead{
+    font-size: 16px;
+}
+
+.lead-neg
+{
+    font-size: 26px;
+}
+
+.anotacao
+{
+    wrap:"hard";
+    cols: 25;
+    name:text;
+    background: #ffffaa;
+    color: darkred;
+}
+
+
+h2 {margin:3px;}
+input[type=text] {margin:10px}
+input[type=button] {margin:10px}
+.container2 {width:16%; float:left;clear: right;margin:15px; border-radius: 5px;}
+.sortable { list-style-type: none; margin:5px; padding:2px; min-height:30px; border-radius: 5px;}
+.sortable li { margin: 3px 3px 3px 3px; padding: 0.9em; padding-left: 1.5em; padding-bottom: 1.5em; font-size: 1.4em; height: 18px;}
+.sortable li span { position: absolute; margin-left: -1.3em; }
+
+.card
+{
+    background-color:white;
+    border-radius:3px;
+}
+
+.stackem div {
+    width: 100%;
+}

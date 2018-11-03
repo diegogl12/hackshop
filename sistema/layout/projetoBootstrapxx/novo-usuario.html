@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>Novo Usuário</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+    <link href="estilo-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+    <style type="text/css">
+
+        .botaum-nu-final{
+            background-color: yellow;
+            color: black;
+            padding: 10px 10px;
+            text-align: center;
+            margin: 4px 2px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            border: solid black 3px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<!-- Barra navegação -->
+<nav class="navbar navbar-default" >
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#barra-navegacao">
+                <span class="sr-only">Alternar Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <span class="img-logo row col-xm-6">GRADÚ</span>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="welcome">Bem Vindo var: apelido</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+<!-- Fim da Barra de Navegação -->
+
+<!-- Barra Lateral -->
+
+<div id="wrapper">
+
+    <!-- Page Content -->
+    <div class="main">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <h3>Cadastrar Usuário</h3>
+
+            </div>
+
+            <div>
+                
+                <form>
+
+                    <div class="row">
+                        <div class="form-group col-sm-3">
+                            <label for="nome-usuario">Nome</label>
+                            <input type="text" class="form-control" id="nome-usuario" autofocus required placeholder="Ex.: João">
+                        </div>
+
+                        <div class="form-group col-sm-3">
+                            <label for="sobrenome-usuario">Sobrenome</label>
+                            <input type="text" class="form-control" id="sobrenome-usuario" required placeholder="Ex.: da Silva">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-sm-3">
+                            <label for="apelido-usuario">Apelido</label>
+                            <input type="text" class="form-control" id="apelido-usuario" required placeholder="Ex.: Zézinho">
+                        </div>
+
+                        <div class="form-group col-sm-3">
+
+                            <label style="color:gray"><br><br>Este apelido será usado como seu Login</label>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="email-usuario">E-mail</label>
+                            <input type="email" class="form-control" id="email-usuario" required placeholder="Ex.: exemplo@email.com">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="email-usuario-confirmacao">Confirmação do E-mail</label>
+                                <input type="email" class="form-control" id="email-usuario-confirmacao" required placeholder="Ex.: exemplo@email.com">
+                            </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="senha-usuario">Senha</label>
+                                <input type="password" class="form-control" id="senha-usuario" required placeholder="Senha">
+                            </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="senha-usuario-confirmacao">Confirmação de Senha</label>
+                                <input type="password" class="form-control" id="senha-usuario-confirmacao" required placeholder="Senha">
+                            </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <input class="botaum-nu-final" type="submit" value="Cadastrar Novo Usuário">
+                        </div>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src= "bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

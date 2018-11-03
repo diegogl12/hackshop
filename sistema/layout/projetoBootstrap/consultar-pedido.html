@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+<!-- Barra navegação -->
+<nav class="navbar navbar-default" >
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#barra-navegacao">
+                <span class="sr-only">Alternar Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <span class="img-logo row col-xm-6">GRADÚ</span>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="welcome">Bem Vindo Usuário</li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret icone">ICON</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Configurações</a> </li>
+                        <li> <a href="Login.html">Logout</a> </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+<!-- Fim da Barra de Navegação -->
+
+<!-- Barra Lateral -->
+
+<div class="conteiner">
+
+    <div class="row-fluid">
+
+        <div>
+
+            <table class="table table-bordered table-hover table-striped table-condensed quadrado">
+
+                <tbody class="table table-hover">
+
+
+                <tr>
+                    <td style="cursor: pointer"><a href="index.html">Início</td>
+                </tr>
+                <tr>
+                    <td style="cursor: pointer"><a href="novo-pedido.html">Novo Pedido</td>
+                </tr>
+                <tr>
+                    <td style="cursor: pointer"><a href="consultar-pedido.html">Consultar Pedido</td>
+                </tr>
+                <tr>
+                    <td style="cursor: pointer;"><a  href="cadastrar-cliente.html">Cadastrar Cliente</td>
+                </tr>
+                <tr>
+                    <td style="cursor: pointer"><a  href="consultar-cliente.html">Consultar Cliente</td>
+                </tr>
+                <tr>
+                    <td style="cursor: pointer"><a  href="produto.html">Produto</td>
+                </tr>
+                <tr>
+                    <td style="cursor: pointer"><a href="gerar-relatorio.html">Gerar Relatório</td>
+                </tr>
+
+                </tbody>
+        </div>
+    </div>
+</div>
+<!-- Fim da barra lateral -->
+
+<!-- Início Formulário -->
+
+<div class="container">
+    <div class="row">
+        <div>
+            <h3>Cadastrar Cliente</h3>
+            <form>
+
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" autofocus required placeholder="Ex.: João da Silva">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" required placeholder="Ex.: joaodasilva@email.com">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" required placeholder="Ex.: (99)9999-9999">
+                    </div>
+
+                    <div class="form-group col-sm-3">
+                        <label for="celular">Celular</label>
+                        <input type="tel" class="form-control" id="celular" required placeholder="Ex.: (99)99999-9999">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <label for="cpf">CPF</label>
+                        <input type="tel" class="form-control" id="cpf" required placeholder="Ex.: 123.456.789-12">
+                    </div>
+
+                    <div class="form-group col-sm-3">
+                        <label for="cep">CEP</label>
+                        <input type="tel" class="form-control" id="cep" required placeholder="Ex.: 12.345-678">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" required placeholder="Ex.: Rua dos Bobos, nº 0">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <label for="select-estado">Estado</label><br>
+
+                        <select class="form-control" id="select-estado">
+                            <option value="Acre">Acre</option>
+                            <option value="Alagoas">Alagoas</option>
+                            <option value="Amapá">Amapá</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Bahia">Bahia</option>
+                            <option value="Ceará">Ceará</option>
+                            <option value="Distrito Federal">Distrito Federal</option>
+                            <option value="Espírito Santo">Espírito Santo</option>
+                            <option value="Goiás">Goiás</option>
+                            <option value="Maranhão">Maranhão</option>
+                            <option value="Mato Grosso">Mato Grosso</option>
+                            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                            <option value="Minas Gerais">Minas Gerais</option>
+                            <option value="Pará">Pará</option>
+                            <option value="Paraíba">Paraíba</option>
+                            <option value="Pernambuco">Pernambuco</option>
+                            <option value="Piauí">Piauí</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                            <option value="Rondônia">Rondônia</option>
+                            <option value="Roraima">Roraima</option>
+                            <option value="Santa Catarina">Santa Catarina</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Sergipe">Sergipe</option>
+                            <option value="Tocantins">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-sm-3">
+                        <label for="select-cidade">Cidade</label><br>
+
+                        <select class="form-control" id="select-cidade">
+                            <option value="Acre">Rio Branco</option>
+                            <option value="Alagoas">Maceió</option>
+                            <option value="Amapá">Macapá</option>
+                            <option value="Amazonas">Manaus</option>
+                            <option value="Bahia">Salvador</option>
+                            <option value="Ceará">Fortaleza</option>
+                            <option value="Distrito Federal">Distrito Federal</option>
+                            <option value="Espírito Santo">Vitória</option>
+                            <option value="Goiás">Goiania</option>
+                            <option value="Maranhão">São Luís</option>
+                            <option value="Mato Grosso">Cuiabá</option>
+                            <option value="Mato Grosso do Sul">Campo Grande</option>
+                            <option value="Minas Gerais">Belo Horizonte</option>
+                            <option value="Pará">Belém</option>
+                            <option value="Paraíba">João Pessoa</option>
+                            <option value="Pernambuco">Recife</option>
+                            <option value="Piauí">Teresina</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Rio Grande do Norte">Natal</option>
+                            <option value="Rio Grande do Sul">Porto Alegre</option>
+                            <option value="Rondônia">Porto Velho</option>
+                            <option value="Roraima">Boa Vista</option>
+                            <option value="Santa Catarina">Curitiba</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Sergipe">Aracajú</option>
+                            <option value="Tocantins">Palmas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-3">
+                        <label for="curso">Curso</label>
+                        <input type="text" class="form-control" id="curso" required placeholder="Ex.: Ciência da Computação">
+                    </div>
+
+                    <div class="form-group col-sm-3">
+                        <label for="faculdade">Faculdade</label>
+                        <input type="text" class="form-control" id="faculdade" required placeholder="Ex.: UFF">
+                    </div>
+                </div>
+
+                <br><br>
+                <button type="submit" class="btn btn-info col-sm-offset-5">OK</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Fim Formulário -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src= "bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

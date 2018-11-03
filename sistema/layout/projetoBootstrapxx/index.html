@@ -1,0 +1,486 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+
+    <title>Início</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+    <link href="estilo-sidebar.css" rel="stylesheet">
+    <link href="estilo-kanban.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    
+
+    <script>
+        $(function() {
+            $( ".sortable" ).sortable({
+                connectWith: ".connectedSortable",
+                receive: function( event, ui ) {
+                    $(this).css({"background-color":""});
+                }
+            }).disableSelection();
+            $('.add-button').click(function() {
+                var txtNewItem = $('#new_text').val();
+                $(this).closest('div.container2').find('ul').append('<li class="card">'+txtNewItem+'</li>');
+            });
+        });
+    </script>
+
+</head>
+
+
+<body>
+
+<!-- Barra navegação -->
+<nav class="navbar navbar-default" >
+
+
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#barra-navegacao">
+                <span class="sr-only">Alternar Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <span class="img-logo row col-xm-6">GRADÚ</span>
+            </a>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="welcome">Bem Vindo Usuário</li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="icone">ICON</span>
+                        <span class="caret caret-chapeu"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a href="#">Configurações</a> </li>
+                        <li><a href="login.html">Logout</a> </li>
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Fim da Barra de Navegação -->
+
+
+<!-- Barra Lateral -->
+
+<div id="wrapper">
+
+    <!-- SideBar -->
+
+    <div class="sidebar-wrapper quadrado">
+
+        <ul class="sidebar-nav">
+            <li>
+                <a href="index.html">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-negociacoes">
+                    <span class="sidebar-icon"></span>
+                    <span class="sidebar-title">Negociações</span>
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-negociacoes" class="panel-collapse collapse panel-switch">
+                    <li><a href="nova-negociacao.html">Nova Negociação</a></li>
+                    <li><a href="consultar-negociacao.html">Consultar Negociação</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-clientes">
+                    <span class="sidebar-icon"></span>
+                    <span class="sidebar-title">Clientes</span>
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-clientes" class="panel-collapse collapse panel-switch">
+                    <li><a href="cadastrar-cliente.html">Cadastrar Cliente</a></li>
+                    <li><a href="consultar-cliente.html">Consultar Cliente</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="produto.html" >
+                    Produtos
+                </a>
+            </li>
+            <li>
+                <a href="gerar-relatorio.html">
+                    Relatório
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Fim da barra lateral -->
+
+<!-- Page Content -->
+<div class="main">
+    <div class="container-fluid">
+        <!-- Abas principais -->
+
+        <div class="container">
+
+            <!-- Criação das abas -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#lead" role="tab" data-toggle="tab" class="abas">Lead</a></li>
+                <li><a href="#negociacao" role="tab" data-toggle="tab" class="abas">Negociação</a></li>
+                <li class="dropdown  col-sm-2 tiipos">
+                    <label for="select-tipos"></label><br>
+
+                    <select class="form-control" id="select-tipos">
+                        <option value="todos"><a class="tipos" href="#">Todos</a></option>
+                        <option value="bone"><a class="tipos" href="#">Boné</a></option>
+                        <option value="camisa"><a class="tipos" href="#">Camisa</a></option>
+                        <option value="caneca"><a class="tipos" href="#">Caneca</a></option>
+                        <option value="casaco"><a class="tipos" href="#">Casaco</a></option>
+                    </select>
+                </li>
+
+            </ul>
+
+            <!-- Conteúdo das abas -->
+            <div class="tab-content">
+
+                <!-- Aba Lead -->
+                <div class="tab-pane active" role="tabpanel" id="lead">
+                    <table class="table lead-neg">
+                        <tr>
+                        <div class="container container2" style="background-color:lightgoldenrodyellow;">
+                            <h3>Pedido de Arte</h3>
+                            <ul class="sortable connectedSortable">
+                                <li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+<li class="card">
+                                    Helio de Almeida
+                                    <a data-target="#meu-popup" data-toggle="modal" id="edit-kanban" class="but-info">
+                                        <i class="fa fa-info-circle"></i>
+                                    </a>
+                                    <br>Computação
+                                    <br>UFF - RO
+                                    <br>Caneca      - 18/08
+                                </li>
+                            </ul>
+                        </div>
+                            <div class="container container2" style="background-color:lightgoldenrodyellow;">
+                                <h3>Alteração da Arte</h3>
+                                <ul class="sortable connectedSortable">
+                                        <li class="card">Arielle de Contti
+                                            <br>Engenharia de Produção
+                                            <br>UFF - RO
+                                            <br>Boné      - 18/08
+                                        </li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Aba Negociação -->
+                <div class="tab-pane" role="tabpanel" id="negociacao">
+                    <table class="table lead-neg">
+                        <tr>
+                            <div class="container container2" style="background-color:lightskyblue;">
+                                <h3>Pedido de Compra</h3>
+                                <ul class="sortable connectedSortable">
+                                    <li class="card">Activity A2</li>
+                                </ul>
+                            </div>
+                            <div class="container container2" style="background-color:lightskyblue;">
+                                <h3>Pagar Fornecedor</h3>
+                                <ul class="sortable connectedSortable">
+                                    <li class="card">Activity B2</li>
+                                </ul>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Fim das Abas principais -->
+    </div>
+</div>
+    <!-- /#page-content-wrapper -->
+
+    <!--PopUp de ver e editar negociação do kanban-->
+
+    <div id="meu-popup" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                   
+                <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Informações da Negociação</h4><br>
+
+                     <button onclick="myFunction()" class="btn btn-warning but-editar">Editar</button>
+
+                     <script>
+                        function myFunction() {
+                            document.getElementByID("nome").disabled = false;
+                            document.getElementByID("cpf").disabled = false;
+                            document.getElementByID("curso").disabled = false;
+                            document.getElementByID("instituicao").disabled = false;
+                            document.getElementByID("produto").disabled = false;
+                            document.getElementByID("quantidade").disabled = false;
+                            document.getElementByID("preco").disabled = false;
+                            document.getElementByID("desconto").disabled = false;
+                            document.getElementByID("end-entrega").disabled = false;
+                            document.getElementByID("tel").disabled = false;
+                            document.getElementByID("email").disabled = false;
+                        }
+                </script>
+
+                     <button onclick="HabilitaCampo()" class="btn btn-warning but-editar">Editar</button>
+
+                     
+                </div>
+            
+                <div class="modal-body">
+                    <form>
+        
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome" disabled="disabled" required placeholder="Ex.: João da Silva">
+                            </div>
+                        
+                            <div class="form-group col-sm-6">
+                                <label for="cpf">CPF</label>
+                                <input type="text" class="form-control" id="cpf" disabled="disabled" required placeholder="Ex.: 123.456.789-12">
+                            </div>
+                        </div>
+        
+                        <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="curso">Curso</label>
+                                    <input type="text" class="form-control" id="curso" disabled="disabled" required placeholder="Ex.: Computação">
+                                </div>
+                            
+                                <div class="form-group col-sm-6">
+                                    <label for="instituicao">Instituição</label>
+                                    <input type="text" class="form-control" id="instituicao" disabled="disabled" required placeholder="Ex.: UFF - RO">
+                                </div>
+                        </div>
+        
+                        <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="produto-pop">Produto</label>
+                                    <input type="text" class="form-control" id="produto-pop" disabled="disabled" required placeholder="Ex.: Caneca">
+                                </div>
+                            
+                                <div class="form-group col-sm-6">
+                                    <label for="qtd-pop">Quantidade</label>
+                                    <input type="text" class="form-control" id="qtd-pop" disabled="disabled" required placeholder="Ex.: 15">
+                                </div>
+                        </div>
+        
+                        <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="preco-pop">Preço</label>
+                                    <input type="text" class="form-control" id="preco-pop" disabled="disabled" required placeholder="Ex.: R$ 30,00">
+                                </div>
+                            
+                                <div class="form-group col-sm-6">
+                                    <label for="desconto-pop">Desconto</label>
+                                    <input type="text" class="form-control" id="desconto-pop" disabled="disabled" required placeholder="Ex.: R$ 5,00">
+                                </div>
+                        </div>
+        
+                        <div class="row">
+                                <div class="form-group col-sm-12">
+                                    <label for="end-entrega">Endereço de Entrega</label>
+                                    <input type="text" class="form-control" id="end-entrega" disabled="disabled" required placeholder="Ex.: Highway To Hell">
+                                </div>
+                        </div>
+        
+                        <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label for="tel-pop">Telefone</label>
+                                    <input type="tel" class="form-control" id="tel-pop" disabled="disabled" required placeholder="Ex.: (22)99999-9999">
+                                </div>
+                            
+                                <div class="form-group col-sm-6">
+                                    <label for="email-pop">E-mail</label>
+                                    <input type="email" class="form-control" id="email-pop" disabled="disabled" required placeholder="Ex.: exemplo@email.com">
+                                </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 stackem">
+                                <div>
+                                    <img src="imagens/exemplo-popup.jpg" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="responsavel">Responsável</label>
+                                <input type="text" class="form-control" id="responsavel" disabled="disabled" required placeholder="Ex.: Vitu">
+                            </div>
+                            <div class="form-group col-sm-6 order-sm-1">
+                                <label for="status">Status</label>
+                                <input type="text" class="form-control" id="status" disabled="disabled" required placeholder="Ex.: Alteração da Arte">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                        <submit type="button" class="btn btn-info" data-dismiss="modal">OK</submit>
+                </div>
+        
+            </div>
+        
+        </div>
+    </div>    
+
+
+    <script>
+            function HabilitaCampo() {
+                document.getElementById("nome").disabled = false;
+                document.getElementById("cpf").disabled = false;
+                document.getElementById("curso").disabled = false;
+                document.getElementById("instituicao").disabled = false;
+                document.getElementById("produto-pop").disabled = false;
+                document.getElementById("qtd-pop").disabled = false;
+                document.getElementById("preco-pop").disabled = false;
+                document.getElementById("desconto-pop").disabled = false;
+                document.getElementById("qtd-pop").disabled = false;
+                document.getElementById("end-entrega").disabled = false;
+                document.getElementById("tel-pop").disabled = false;
+                document.getElementById("email-pop").disabled = false;
+                document.getElementById("responsavel").disabled = false;
+                document.getElementById("status").disabled = false;
+            }
+    </script>
+
+</body>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Anotações:<br>
+<textarea class="anotacao" rows="10" placeholder="Use para anotações..." onclick="this.focus()" onfocus="this.select()" style="margin-left: 15px;">
+</textarea>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src= "bootstrap/js/bootstrap.min.js"></script>
+
+</html>
