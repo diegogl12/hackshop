@@ -22,9 +22,9 @@ class My_Controller extends CI_Controller
     
     public function pagina()
     {
-        $this->load->view('header',$this->header_sidebar);
-        $this->load->view('sidebar',$this->session->all_userdata());
+        //$this->load->view('header',$this->header_sidebar);
+        //$this->load->view('sidebar',$this->session->all_userdata());
         $this->load->view($this->pagina_atual,$this->conteudo);
-        $this->load->view('footer',$this->header_sidebar);
+        //$this->load->view('footer',$this->header_sidebar);
     }
 }

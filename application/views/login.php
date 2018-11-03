@@ -13,13 +13,20 @@
         }
 
         form{
-            margin-top: 195px;
+            margin-top: 20px;
         }
         
         h3{
             color : red;
         }
-
+        
+        .instrucao{
+            border-radius: 115px;
+            margin-top: 150px;
+            position: relative;
+            line-height: 30px;
+            
+        }
         .caixas{
             text-align: center;
             line-height: 30px;
@@ -32,7 +39,7 @@
         }
 
         .botaum{
-            background-color: yellow;
+            background-color: white;
             color: black;
             padding: 10px 10px;
             text-align: center;
@@ -41,7 +48,7 @@
             font-weight: bold;
             cursor: pointer;
             border-radius: 10px;
-            border: solid black 4px;
+            border: solid red 4px;
             font-weight: bold;
         }
 
@@ -52,8 +59,8 @@
             margin-left: auto;
             margin-right: auto;
             margin-top: 140px;
-            width: 300px;
-            height: 128px;
+            width: 100px;
+            height: 100px;
         }
 
         #main {
@@ -73,9 +80,9 @@
             top: 10px;
             text-decoration: none;
         }
-
+        
         .botaum-nu{
-            background-color: yellow;
+            background-color: white;
             color: black;
             padding: 10px 10px;
             text-align: center;
@@ -84,7 +91,7 @@
             font-weight: bold;
             cursor: pointer;
             border-radius: 10px;
-            border: solid black 6px;
+            border: solid red 6px;
         }
 
         .log-box{
@@ -101,20 +108,24 @@
 <body>
 
     
-    <img src="<?php echo base_url('assets/imagens/logo-sem-slogan.png')?>" alt="gradu" class="logologo">
+    <img src="<?php echo base_url('assets/imagens/digital.png')?>" alt="gradu" class="logologo">
+
 
     <div class="log-box" id="main">
-
+        <h3 class="instrucao">
+            INSIRA UMA DIGITAL
+        <br>OU</h3>
+    
         <form role="form" action="<?php echo base_url('login/validar'); ?>" method="POST">
-
-            <input class="caixas" type="text" id="usuario" name="usuario" autofocus required placeholder="LOGIN" >
-            <br><br>
-
-            <input class="caixas" type="password" id="senha" name="senha" required placeholder="SENHA">
+            <input class="caixas" type="text" id="cpf" name="usuario" autofocus required placeholder="CPF ou RG" autocomplete="OFF">
+            <select class="caixas" name="documento">
+                <option selected value="cpf">CPF</option>
+                <option value="rg">RG</option>
+            </select>
             <br><br>
 
             <a href="sucesso.php.html">
-                <input class="botaum" type="submit" value="ENTRAR">
+                <input class="botaum" type="submit" value="PESQUISAR">
             </a>
             
 
