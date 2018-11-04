@@ -5,11 +5,16 @@
 
     <title>Login</title>
     <meta charset="utf-8">
+    
+    <link href="<?php echo base_url("assets/bootstrap/css/bootstrap.min.css"); ?>" rel="stylesheet">
+    <link href="<?php echo base_url("assets/bootstrap/css/estilo.css"); ?>" rel="stylesheet">
 
     <style type="text/css">
 
         body{
-            background-image: url("<?php echo base_url('assets/imagens/fundo.jpg')?>");
+            background-image: url("<?php echo base_url('assets/imagens/back.png')?>");
+            width: 100%;
+            height: 100%;
         }
 
         form{
@@ -62,6 +67,25 @@
             width: 100px;
             height: 100px;
         }
+        
+        .logo{
+            display: block;
+            position: relative;
+            margin-left: 10%;
+            margin-right: 90%;
+            margin-top: 90%;
+            width: 20%;
+            height: 20%;
+        }
+        
+        .top
+        {
+            margin-top: 90%;
+            width: 100%;
+            height: 30%;
+            background-color: black;
+             
+        }
 
         #main {
             margin: auto;
@@ -107,6 +131,15 @@
 
 <body>
 
+    <div class="top">
+        <img src="<?php echo base_url('assets/imagens/logo AiCuide.png')?>" alt="gradu" class="logo">
+
+        <div class="topnav" style="width: 480px; margin-left: 55%; position: relative">
+          <a class="active" href="#home">Página Principal</a>
+          <a href="#news">Histórico de Atendimento</a>
+          <a href="#contact">Logout</a>
+        </div>
+    </div>
     
     <img src="<?php echo base_url('assets/imagens/digital.png')?>" alt="gradu" class="logologo">
 
@@ -116,7 +149,7 @@
             INSIRA UMA DIGITAL
         <br>OU</h3>
     
-        <form role="form" action="<?php echo base_url('login/validar'); ?>" method="POST">
+        <form role="form" action="<?php echo base_url('Login/validar'); ?>" method="POST">
             <input class="caixas" type="text" id="cpf" name="usuario" autofocus required placeholder="CPF ou RG" autocomplete="OFF">
             <select class="caixas" name="documento">
                 <option selected value="cpf">CPF</option>

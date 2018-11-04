@@ -1,7 +1,13 @@
 <?php
 
-class acidentado extends CI_Model
+class Pessoa_model extends CI_Model
 {
+    
+    public function __construct() {
+        parent::__construct();
+    }
+            
+    
     public function pesquisa_digital($dadosp)
     {
         $dados = Array (

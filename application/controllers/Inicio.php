@@ -10,8 +10,10 @@ class Inicio extends My_Controller
         
         function index()
         {
-            $this->pagina_atual = "login";
+            $this->pagina_atual = "inicio";
             
+            
+            $this->conteudo['pessoa'] = $this->session->userdata('acidentado');
             $this->pagina();
         }
         

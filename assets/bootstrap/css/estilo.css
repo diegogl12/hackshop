@@ -1,238 +1,30 @@
-@font-face {
-    font-family: Font-Gradu;
-    src: url(../../fontface/fonts/BebasNeue-Book.woff);
-}
-
-body{
-    background: url("../../imagens/fundo.jpg");
-    background-attachment: fixed;
-    font-family: Font-Gradu;
-    overflow: auto;
-}
-
-.img-logo
+.topnav 
 {
-    height: 60px;
-    width: 140px;
-    display: inline-block;
-    float: top;
-    background: url("../../imagens/logo-sem-slogan.png") no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
-    color: transparent;
-}
-
-.img-logo:hover
-{
-    opacity: 0.8;
-    filter: alpha(opacity=80); /* For IE8 and earlier */
-}
-
-nav.navbar-transparente
-{
-    padding: 15px 0px;
-    background: transparent;
-    border: none;
-}
-
-.navbar-brand
-{
-    padding: 5px 15px;
-}
-
-.icone
-{
-    height: 40px;
-    width: 60px;
-    display: inline-block;
-    float: top;
-    margin-left: -10px;
-    background: url("../../imagens/chapeu.png") no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
-    color: transparent;
-}
-
-.icone:hover
-{
-    opacity: 0.8;
-    filter: alpha(opacity=80); /* For IE8 and earlier */
-}
-
-.welcome
-{
-    font-size: 20px;
-}
-
-.ajeitando-welcome{
-    margin-top: -25px;
-    margin-left: -135px;
-}
-
-ul
-{
-    list-style-type: none;
-}
-
-.quadrado
-{
-    max-width: 15%;
-    font-size: 10px;
-    font-family: "Bebas Neue", Arial, sans-serif;
-}
-
-/*.quadrado-hover
-{
-    from
-    {
-        background-color: #ffeb00;
-    }
-    to
-    {
-        background-color: #e6b400;
-    }
-}*/
-
-
-/* unvisited link */
-a:link
-{
-    color: black;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited
-{
-    color: black;
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover
-{
-    color: #4d4d4d;
-}
-
-/* selected link */
-a:active
-{
-    color: black;
-    text-decoration: strong;
-}
-
-.abas
-{
-    -webkit-border-radius: 15px 15px 0px 0px;
-    -moz-border-radius: 15px 15px 0px 0px;
-    border-radius: 15px 15px 0px 0px;
-    font-size: 26px;
-}
-
-.tipos
-{
-    font-size: 18px;
-}
-
-.progress{
-  width: 210%;
-  height: 100%;
-  background: black;
-  margin-left: 166px;
-}
-
-.progress .status{
-  background: #FFCE00;
-  float: left;
-  height: 100%;
-  padding-left: 5px;
-  padding-top: 25px;
-  font-size: 8px;
-  line-height: 1.5
-}
-
-.pesquisar
-{
-    padding-top: 18px;
-    padding-left: 550px;
-}
-
-.tiipos{
-    display: inline-block;
-    float: rigth;
-    margin-left: 30%;
-}
-
-
-thead{
-    font-size: 16px;
-}
-
-.lead-neg
-{
-    font-size: 10px;
-}
-
-
-
-
-/* Toggle Switch to EDIT */
-
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {display:none;}
-
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    margin-left: 65%;
+    margin-top: 30px;
+    border-radius: 25px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    overflow: hidden;
+    width: 335px;
 }
 
-input:checked + .slider {
-    background-color: #FFCE00;
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #FFCE00;
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
 }
 
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-    border-radius: 20px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: red;
+    color: white;
 }
