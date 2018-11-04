@@ -47,4 +47,11 @@ class Login extends CI_Controller
             redirect();
     }
     
+    public function logout()
+    {
+        $this->session->set_userdata('validacao', FALSE);
+        
+        redirect();
+    }
+    
 }

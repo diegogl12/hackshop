@@ -135,8 +135,8 @@
         <img src="<?php echo base_url('assets/imagens/logo AiCuide.png')?>" alt="gradu" class="logo">
 
         <div class="topnav" style="width: 480px; margin-left: 55%; position: relative">
-          <a class="active" href="#home">Página Principal</a>
-          <a href="#news">Histórico de Atendimento</a>
+            <a class="active" href="<?php echo base_url("login")?>">Página Principal</a>
+            <a href="<?php echo base_url('historico')?>">Histórico de Atendimento</a>
           <a href="#contact">Logout</a>
         </div>
     </div>
